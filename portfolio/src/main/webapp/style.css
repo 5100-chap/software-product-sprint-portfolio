@@ -6,7 +6,7 @@
 }
 
 .bg-option-2 {
-  background-color: rgb(68, 121, 236);
+  background-color: rgb(84, 130, 203);
   color: rgb(255, 255, 255);
 }
 
@@ -16,6 +16,18 @@
 }
 
 .bg-option-4 {
-  background-color: rgba(29, 111, 235, 0.5);
+  background-color: rgba(40, 80, 140, 0.5);
   color: rgb(255, 255, 255)
 }
+.bg-option-5 {
+  background-color: rgba(68, 121, 236, 0.247);
+  color: rgb(255, 255, 255)
+}
+.bg-option-6 {
+  background-color: rgb(32, 37, 49);
+  color: rgb(255, 255, 255)
+}
+.text-color-blue{
+  color:rgb(101, 111, 224)
+}
+/*Fonts families*/
