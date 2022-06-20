@@ -1,9 +1,21 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/*Style.css*/
+/*Background colors options*/
+.bg-option-1 {
+  background-color: rgb(26, 188, 34);
+  color: rgb(255, 255, 255);
 }
 
-#greeting-container {
-  margin-top: 20px;
+.bg-option-2 {
+  background-color: rgb(68, 121, 236);
+  color: rgb(255, 255, 255);
+}
+
+.bg-option-3 {
+  background-color: rgb(238, 236, 234);
+  color: rgb(85, 85, 85);
+}
+
+.bg-option-4 {
+  background-color: rgba(29, 111, 235, 0.5);
+  color: rgb(255, 255, 255)
 }

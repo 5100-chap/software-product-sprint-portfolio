@@ -4,3 +4,5 @@
 .settings/
 target/
 .vscode/**
+walkthroughs/**
+walkthroughs/week-1-web-development/examples/stanley/src/main/webapp/script.js
