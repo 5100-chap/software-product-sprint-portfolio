@@ -1,33 +1,67 @@
 /*Style.css*/
 /*Background colors options*/
 .bg-option-1 {
-  background-color: rgb(26, 188, 34);
-  color: rgb(255, 255, 255);
+  background-color: #052c53;
+  color: rgb(224, 224, 224);
 }
 
 .bg-option-2 {
-  background-color: rgb(84, 130, 203);
-  color: rgb(255, 255, 255);
+  background-color: #094c90;
+  color: rgb(224, 224, 224);
 }
 
 .bg-option-3 {
-  background-color: rgb(238, 236, 234);
-  color: rgb(85, 85, 85);
+  background-color: #90091d;
+  color: rgb(224, 224, 224);
 }
-
+.bg-option-3-alt {
+  background-color: rgb(27, 25, 70);
+  color: rgb(238, 236, 234);
+}
 .bg-option-4 {
   background-color: rgba(40, 80, 140, 0.5);
-  color: rgb(255, 255, 255)
+  color: rgb(224, 224, 224);
 }
 .bg-option-5 {
   background-color: rgba(68, 121, 236, 0.247);
-  color: rgb(255, 255, 255)
+  color: rgb(224, 224, 224);
 }
 .bg-option-6 {
   background-color: rgb(32, 37, 49);
-  color: rgb(255, 255, 255)
+  color: rgb(224, 224, 224);
 }
-.text-color-blue{
-  color:rgb(101, 111, 224)
+.bg-option-7 {
+  background-color: rgb(167, 59, 20);
+  color: rgb(224, 224, 224);
 }
-/*Fonts families*/
+.bg-option-8 {
+  background-color: rgba(134, 48, 16, 0.722);
+  color: rgb(224, 224, 224);
+}
+.bg-option-9 {
+  background-color: #082032;
+  color: rgb(224, 224, 224);
+}
+.bg-option-10 {
+  background-color: #19191a;
+  color: rgb(224, 224, 224);
+}
+/*custom text colors*/
+.text-color-blue {
+  color: rgb(101, 111, 224);
+}
+/*Define font families*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Lora&family=Quicksand&family=Roboto+Condensed&display=swap");
+/*Custom font*/
+.custom-font-dosis{
+  font-family: 'Dosis', sans-serif;
+}
+.custom-font-Lora{
+  font-family: 'Lora', serif;
+}
+.custom-font-Quicksand{
+  font-family: 'Quicksand', sans-serif;
+}
+.custom-font-Roboto-Condensed{
+  font-family: 'Roboto Condensed', sans-serif;
+}
