@@ -1,56 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <!--Page's title in web browsers-->
   <title>Diego's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <!--Local Javascript file-->
+  <script src="main-script.js"></script>
+  <!--Define charset-->
+  <meta charset="utf-8">
+  <!--Bootstrap 5 CSS (CDN)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--Bootstrap 5 Javascript (CDN)-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Mobile rendering meta info.-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    .bg-1 {
-      background-color: rgb(26, 188, 34);
-      color: rgb(255, 255, 255);
-    }
-
-    .bg-2 {
-      background-color: rgb(68, 121, 236);
-      color: rgb(238, 236, 234);
-    }
-
-    .bg-3 {
-      background-color: rgb(238, 236, 234);
-      color: rgb(85, 85, 85);
-    }
-  </style>
+  <!--Local CSS file-->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div class="jumbotron bg-2 text-center">
-    <h1>Hello, this is Diego's Portfolio c:</h1>
-    <p>This page contains information and details about me.</p>
-  </div>
-
-  <div class="container bg-3 text-center">
-    <div class="row text-left">
-      <div class="col-sm-6">
-        <h3> Who I am? &#x1F440;<small>My presentation</small></h3>
-        <p>My full name is Diego Alberto Baños Lopez, I'm 21 years old, I currently live in Mexico
-          <img alt="🇲🇽" class="imga"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAwFBMVEVHcEwAaEfOESYAaEfOESYAaEfOESYAaEfOESbOESbu7u5ckTvK2MJml0V3pFygvY6DqmoAaEfZr6Lp6OTTnY3+zE1VrO62y63OjnvB3a/c49hunk/V4s3evrSMum/BaU+m0onOESbLg2nEcVlfsOyUtn7uwlmw1JjD07fjzcbJ4bri6evEuU51pE7HemOdy35hlUD02qGdqULo3dq61qir0e7m1dCMub6uxaDgwUp8rl17ve7op06iq23FyI771XW4SRQ0AAAACnRSTlMAIO/vYGAgx7/Pk9tBQgAAAcZJREFUeF7t11dP3FAQhuFNQrLwzWmuvWzvnZ76//9VTsDAiotIO1hRhPxK9uUje2x5dzrvt7a2z13nVfhL/Vedn9XMB8swobqLLw/OJ4cP1X38I3UdJnTchZ2P0wTUP+t0m4HOO04zUP9/gVooSmG7GVRVXLwFSimC5/rWsW38SzYkyNvH1XO+x7+i1ffqqAEXQvpz9cNO6DmXBQnYtLmsXhp6DEiRTBHRnVsd5TIgLTId0RjxMbRhzchoOQb8+q4ezyxIZ1IJzB+hebxhQ6k0hjTc+iUq7EXFLAh2RGr9q378g5t5zIJmM3sY9fJKDgt36DMgohSelLP93p3XA48LV0oGJCxEdJcDKCYT1/ddCCIWhDwjImkic39vSIIFlV8XADwxpqckkOzUyVDSm+KhPNJCE5nIA6a95GQoz0gAy+tv4e0kOBDdLgGRlfnJEDJSwCgMwyAIJB1GI3iKFOczQjR9glaHIBxBEwkGBK22SX1rwSS6XiblToMDIdmSEqgTRvUS8CBcEdF4kQuRLkoiWoALQWRUbi2x7q0pE+BDQJ70dhaaXs3+wU92C7VQY3/YG1shmlpqGluzmlr8mlpF321tbb8BFmQwyTOjUW8AAAAASUVORK5CYII="
-            width="20" height="20">
-          and I'm currently studing at Tecnologico de Monterrey in Computer Science.
-        </p>
-      </div>
-      <div class="col-sm-6 text-center">
-        <img alt="Me c:" class="imga" src="Images/IMG-20200426-WA0010.jpg" width="300" height="400">
-      </div>
-
+<body class="bg-option-6">
+  <!--Tittle section-->
+  <div class="container-fluid p-5 bg-option-5 text-center" id="Main-Title">
+    <div class="fade-in-title">
+      <h1>Hi! this is Diego's Portfolio 💼</h1>
+      <p>This page contains information and details about me.</p>
     </div>
   </div>
+  <!--Bar menu-->
+  <nav class="navbar navbar-expand-sm bg-option-10 navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav fade-in-title">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html#intro">Introduction</a>
+        <li>
+          <a class="nav-link active" href="index.html#projects">Projects</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact me</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Content index-->
+  <div class="container p-5 my-5 mt-5 bg-option-6 fade-in" id="intro">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="container bg-option-4">
+          <div class="container-fluid bg-option-5 p-2">
+            <h3>
+              <b class="display-6 fw-bold">Who I am?&#x1F440;</b>
+              <small class="fs-4 fw-lighter">My presentation</small>
+            </h3>
+          </div>
+          <p>My full name is Diego Alberto Baños Lopez, I'm 21 years old, I currently live in Mexico
+            <!-- Mexico's flag-->
+            <img alt="🇲🇽" class="imga"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAwFBMVEVHcEwAaEfOESYAaEfOESYAaEfOESYAaEfOESbOESbu7u5ckTvK2MJml0V3pFygvY6DqmoAaEfZr6Lp6OTTnY3+zE1VrO62y63OjnvB3a/c49hunk/V4s3evrSMum/BaU+m0onOESbLg2nEcVlfsOyUtn7uwlmw1JjD07fjzcbJ4bri6evEuU51pE7HemOdy35hlUD02qGdqULo3dq61qir0e7m1dCMub6uxaDgwUp8rl17ve7op06iq23FyI771XW4SRQ0AAAACnRSTlMAIO/vYGAgx7/Pk9tBQgAAAcZJREFUeF7t11dP3FAQhuFNQrLwzWmuvWzvnZ76//9VTsDAiotIO1hRhPxK9uUje2x5dzrvt7a2z13nVfhL/Vedn9XMB8swobqLLw/OJ4cP1X38I3UdJnTchZ2P0wTUP+t0m4HOO04zUP9/gVooSmG7GVRVXLwFSimC5/rWsW38SzYkyNvH1XO+x7+i1ffqqAEXQvpz9cNO6DmXBQnYtLmsXhp6DEiRTBHRnVsd5TIgLTId0RjxMbRhzchoOQb8+q4ezyxIZ1IJzB+hebxhQ6k0hjTc+iUq7EXFLAh2RGr9q378g5t5zIJmM3sY9fJKDgt36DMgohSelLP93p3XA48LV0oGJCxEdJcDKCYT1/ddCCIWhDwjImkic39vSIIFlV8XADwxpqckkOzUyVDSm+KhPNJCE5nIA6a95GQoz0gAy+tv4e0kOBDdLgGRlfnJEDJSwCgMwyAIJB1GI3iKFOczQjR9glaHIBxBEwkGBK22SX1rwSS6XiblToMDIdmSEqgTRvUS8CBcEdF4kQuRLkoiWoALQWRUbi2x7q0pE+BDQJ70dhaaXs3+wU92C7VQY3/YG1shmlpqGluzmlr8mlpF321tbb8BFmQwyTOjUW8AAAAASUVORK5CYII="
+              width="20" height="20">
+            and I'm currently studing at Tecnologico de Monterrey in Computer Science
+            <!-- Computer emoji-->
+            <img alt="computer" class="imga"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAALVBMVEVHcEzh6O3M1t3M1t3M1t3M1t3h6O3h6O3M1t3h6O3h6O3M1t1drez1+PqaqrQgdx3PAAAACnRSTlMA7yBgz78gn+8wP4TEOQAAAJpJREFUeNrt1zkOwzAMBVHS2mwyyf2P6yhphRThdOI07h7gRYC/zErzQK3It6N6sHp8nNPDnVOqDlRFiiMVaQzUxKF46PFnCSWUUEIJJZRQQgltCAGhEPbDjk0IatRgM4sbfswU/d1rkSzbF/JFu0J9qIXS0adzqYXTS6SrAWmXYUhD1GbPd5GrqRgDGQZht4Y9bOz1Ux8kd0RugLPQMd3pf3kAAAAASUVORK5CYII="
+              width="20" height="20">🧪.
+          </p>
+          <h3>My interests:</h3>
+          <ul class="list-unstyled">
+            <ul class="custom-font-dosis">
+              <li>Artificial intelligence 🧠</li>
+              <li>Deep Learning 👓</li>
+              <li>Videogames Mods 🎮</li>
+              <li>Videogames programming 🕹️</li>
+            </ul>
+          </ul>
+          <h3>My experiences:</h3>
+          <ul class="list-unstyled">
+            <ul class="custom-font-dosis">
+              <li>I participated in the FIRST-2020 robotics competition on behalf of the KEYBOT 5716 team. </li>
+              <li>I'm currently participating in Google's
+                <abbr title="Software Product Sprint" class="custom-font-Lora">SPS</abbr>
+                2022
+              </li>
+              <li>Participated in
+                <abbt title="An United Nations Simulation" class="custom-font-Lora">
+                  HIDALMUN 2017
+                </abbt> as Yemen's Delegate.
+              </li>
+            </ul>
+          </ul>
+          <h3>My Skills:</h3>
+          <ul class="list-unstyled">
+            <ul class="custom-font-dosis">
+              <li>Up to the last modification date I have used:</li>
+              <ul>
+                <li>Python</li>
+                <li>C++</li>
+                <li>C# (Unity)</li>
+                <li>Java</li>
+                <li>Javascript</li>
+                <li>Go</li>
+                <li>Matlab</li>
+                <li>R</li>
+                <li>Racket</li>
+                <li>Sqlite</li>
+              </ul>
+            </ul>
+          </ul>
+          <!--Blank space-->
+          <div class="my-1 text-sm-center opacity-0">. </div>
+        </div>
+        <!--Project section-->
+        <div class="container-sm bg-option-8" id="projects">
+          <div class="container-fluid bg-option-7">
+            <h3>
+              <b class="display-6 fw-bold">
+                What are my projects? 😮
+              </b>
+              <small class="fs-4 fw-lighter">
+                My Projects
+              </small>
+            </h3>
+          </div>
+          <!--Display projects-->
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="card my-3 bg-option-9">
+                    <img src="Images/checkers.png" class="card-image-top" alt="thumbnail">
+                    <div class="card-body">
+                      <h3 class="card-title"><b class="text-info">Pygame Checkers</b></h3>
+                      <p class="card-text">
+                        Originally called "Juegos Cognitivos: Damas" this is a little pygame where the player plays a
+                        checkers game with another player. (Multiplayer)
+                      </p>
+                      <a href="https://github.com/5100-chap/checkers_pygame_es" class="btn btn-info">
+                        Check GitHub repo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!--Image of the author no. 1-->
+      <div class="col-sm-4 text-center">
+        <img alt="Me c:" class="rounded-3" src="Images/IMG-20200426-WA0010.jpg" width="300" height="400">
+      </div>
+    </div>
+  </div>
+
+  <!--Bottom-->
+  <div class="mt-5 p-4 bg-dark bg-option-6 text-center">
+    <div class="row fade-in-title">
+      <div class="col-sm-4">
+        <p class="text-color-blue">
+          <b class="custom-font-dosis">Contact info:
+          </b>
+        </p>
+        <p class="custom-font-Quicksand">Cellphone: +(52) 55 5068 1712</p>
+        <p class="link-info custom-font-Quicksand">Email:
+          <a href="mailto:diego313121@tutanota.com">diego313121@tutanota.com</a>
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <!--Blank space-->
+        <div class="my-1 text-sm-center opacity-0">. </div>
+        <p class="custom-font-Roboto-Condensed">Diego Alberto Baños Lopez's Portfolio</p>
+        <p>2022 v. alpha_0.0.11
+          <a href="https://github.com/5100-chap">
+            <img alt="github-b&w" class="rounded-circle"
+              src="https://logos-marques.com/wp-content/uploads/2021/03/GitHub-Embleme-2048x1158.png" width="78"
+              height="42">
+          </a>
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-color-blue">
+          <b class="custom-font-dosis">
+            Social media:
+          </b>
+        </p>
+        <a href="https://instagram.com/banosdiag?igshid=YmMyMTA2M2Y=">
+          <img alt="inst-b&w" class="rounded-circle"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Ffreebiesupply%2Flarge%2F2x%2Finstagram-icon-white-on-black.png&f=1&nofb=1"
+            width="58" height="42">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100056671733801">
+          <img alt="fb-b&w" class="rounded-circle"
+            src="https://clipground.com/images/facebook-logo-png-transparent-background-black-1.png" width="42"
+            height="42">
+        </a>
+        <a
+          href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BDcykJa1RSkqVVeOe%2BW4I%2BQ%3D%3D">
+          <img alt="ld-b&w" class="rounded-circle"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2F2018-social-media-black-and-white-logos%2F1000%2F2018_social_media_popular_app_logo_linkedin-1024.png&f=1&nofb=1"
+            width="44" height="42">
+        </a>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
