@@ -13,6 +13,7 @@
 // limitations under the License.
 
 package com.google.sps.servlets;
+
 //Google Cloud Datastore Libraries
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
@@ -31,37 +32,42 @@ import org.jsoup.Jsoup;
 import java.util.concurrent.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    //Message Variables
+    // Message Variables
     String name = request.getParameter("name-input");
     String email = request.getParameter("email-input");
     String description = request.getParameter("message-input");
-    //Timestamp
+    // Timestamp
     LocalDateTime timefor = LocalDateTime.now();
-    DateTimeFormatter timeunf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    DateTimeFormatter timeunf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss Z");
     String timestamp = timefor.format(timeunf);
-    //Time sleep
+    // Time sleep
     TimeUnit stime = TimeUnit.SECONDS;
     long timeToSleep = 0L;
-    try{
-    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
-    FullEntity taskEntity =
-        Entity.newBuilder(keyFactory.newKey())
-            .set("Name_Sender", name)
-            .set("Email_Sender", email)
-            .set("Message_Sender", description)
-            .set("timestamp", timestamp)
-            .build();
-    datastore.put(taskEntity);
+    try {
+      //Calls Google's Datastore
+      Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+      KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
+      //Creates a entity in the database
+      FullEntity taskEntity = Entity.newBuilder(keyFactory.newKey())
+          .set("Name_Sender", name)
+          .set("Email_Sender", email)
+          .set("Message_Sender", description)
+          .set("timestamp", timestamp)
+          .build();
+      //Inserts the entity in the database
+      datastore.put(taskEntity);
+      //Returns success page
       stime.sleep(timeToSleep);
-      response.sendRedirect("/formResponse/success.html");
-    }catch(InterruptedException x){
-    response.sendRedirect("/formResponse/Error.html");
+      response.sendRedirect("/formResponse/success.html#yes");
+    } catch (InterruptedException x) {
+      //Returns error page
+      response.sendRedirect("/formResponse/Error.html#notSubmitted");
     }
   }
 }
