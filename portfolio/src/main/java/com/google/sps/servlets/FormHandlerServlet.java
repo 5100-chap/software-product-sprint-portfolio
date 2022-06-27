@@ -13,13 +13,22 @@
 // limitations under the License.
 
 package com.google.sps.servlets;
-
+//Google Cloud Datastore Libraries
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
+//Java HTTP Libraries
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+//Jsoup Libraries
+import org.jsoup.Jsoup;
+//Import lIbraries fot TimeUnit class
+import java.util.concurrent.*;
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
 
@@ -28,17 +37,31 @@ public class FormHandlerServlet extends HttpServlet {
     String name = request.getParameter("name-input");
     String email = request.getParameter("email-input");
     String description = request.getParameter("message-input");
-
-    // // Print the input so you can see it in the server logs.
-    System.out.println("name: " + name);
-    System.out.println("email: " + email);
-    System.out.println("description: " + description);
-
+    long timestamp = System.currentTimeMillis();
+    TimeUnit stime = TimeUnit.SECONDS;
+    long timeToSleep = 3L;
     // Write the input to the response so the user can see it.
     response.setContentType("text/html;");
     response.getWriter().println("Your message has been registered!");
     response.getWriter().println("<p>Name: " + name + "</p>");
     response.getWriter().println("<p>Color: " + email + "</p>");
     response.getWriter().println("<p>Description: " + description + "</p>");
+    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
+    FullEntity taskEntity =
+        Entity.newBuilder(keyFactory.newKey())
+            .set("Name_Sender", name)
+            .set("Email_Sender", email)
+            .set("Message_Sender", description)
+            .set("timestamp", timestamp)
+            .build();
+    datastore.put(taskEntity);
+    try{
+      stime.sleep(timeToSleep);
+      response.getWriter().println("<p>Returning to Contact Me page...</p>");
+      response.sendRedirect("contact.html");
+    }catch(InterruptedException x){
+      response.getWriter().println("<p>You can go back to Portfolio's page</p>");
+    }
   }
 }
