@@ -44,8 +44,11 @@ public class FormHandlerServlet extends HttpServlet {
     String description = request.getParameter("message-input");
     // Timestamp
     LocalDateTime timefor = LocalDateTime.now();
-    DateTimeFormatter timeunf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss Z");
+    DateTimeFormatter timeunf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
     String timestamp = timefor.format(timeunf);
+    //Timezone
+    ZoneId z = ZoneId.systemDefault();
+    timestamp += " " + z.toString();
     // Time sleep
     TimeUnit stime = TimeUnit.SECONDS;
     long timeToSleep = 0L;
