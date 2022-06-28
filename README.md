@@ -1,12 +1,6 @@
-# Google Software Product Sprint
+# Diego's Portfolio (Google Software Product Sprint)
 
-This repo contains the projects you'll work on throughout SPS.
-
-To get started:
-
-- Login to [Google Cloud Shell](https://ssh.cloud.google.com/cloudshell/editor)
-- Clone this repo: `cd; git clone https://github.com/google/software-product-sprint.git`
-- Open the GitHub setup walkthrough: `teachme ~/software-product-sprint/walkthroughs/week-0-setup/github-setup-walkthrough.md`
-  - If the tutorial panel does not open or display the walkthrough contents, try refreshing the page.
-
-Then follow the on-screen instructions to set up your repo.
+This is the source code of my portfolio; in this repository you’ll find two folders:
+- Walkthroughs: This folder contains the tutorials to make the portfolio’s using [Google Cloud Shell](https://ssh.cloud.google.com/cloudshell/editor).
+- Portfolio: This folder contains all the necessary files to make the frontend and backend website using Java as server-side language.
+The website uses [Google Cloud](https://console.cloud.google.com/) to function properly.
