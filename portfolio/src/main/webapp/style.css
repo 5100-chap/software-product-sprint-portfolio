@@ -1,9 +1,107 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/*Style.css*/
+/*Background colors options*/
+.bg-option-1 {
+  background-color: #052c53;
+  color: rgb(224, 224, 224);
 }
 
-#greeting-container {
-  margin-top: 20px;
+.bg-option-2 {
+  background-color: #094c90;
+  color: rgb(224, 224, 224);
+}
+
+.bg-option-3 {
+  background-color: #90091d;
+  color: rgb(224, 224, 224);
+}
+.bg-option-3-alt {
+  background-color: rgb(27, 25, 70);
+  color: rgb(238, 236, 234);
+}
+.bg-option-4 {
+  background-color: rgba(40, 80, 140, 0.5);
+  color: rgb(224, 224, 224);
+}
+.bg-option-5 {
+  background-color: rgba(68, 121, 236, 0.247);
+  color: rgb(224, 224, 224);
+}
+.bg-option-6 {
+  background-color: rgb(32, 37, 49);
+  color: rgb(224, 224, 224);
+}
+.bg-option-7 {
+  background-color: rgb(167, 59, 20);
+  color: rgb(224, 224, 224);
+}
+.bg-option-8 {
+  background-color: rgba(134, 48, 16, 0.722);
+  color: rgb(224, 224, 224);
+}
+.bg-option-9 {
+  background-color: #082032;
+  color: rgb(224, 224, 224);
+}
+.bg-option-10 {
+  background-color: #19191a;
+  color: rgb(224, 224, 224);
+}
+/*custom text colors*/
+.text-color-blue {
+  color: rgb(101, 111, 224);
+}
+/*Define font families*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Lora&family=Quicksand&family=Roboto+Condensed&display=swap");
+/*Custom font*/
+.custom-font-dosis{
+  font-family: 'Dosis', sans-serif;
+}
+.custom-font-Lora{
+  font-family: 'Lora', serif;
+}
+.custom-font-Quicksand{
+  font-family: 'Quicksand', sans-serif;
+}
+/*.custom-font-Roboto-Condensed{
+  font-family: 'Roboto Condensed', sans-serif;
+}*/
+/*Animations*/
+.fade-in {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2;
+  -ms-animation: fadeIn 2s;
+}
+.fade-in-title {
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 21;
+  -ms-animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
